@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,13 +17,13 @@
     <section class="card card--nav" aria-label="Fylo navigation">
       <img class="logo" src="images/logo.svg" alt="Fylo logo" width="135" height="40">
       <div class="action-icons">
-        <button class="action-icon" aria-label="Documents">
+        <button class="action-icon" aria-label="Documents" type="button">
           <img src="images/icon-document.svg" alt="Document icon">
         </button>
-        <button class="action-icon" aria-label="Folders">
+        <button class="action-icon" aria-label="Folders" type="button">
           <img src="images/icon-folder.svg" alt="Folder icon">
         </button>
-        <button class="action-icon" aria-label="Upload">
+        <button class="action-icon" aria-label="Upload" type="button">
           <img src="images/icon-upload.svg" alt="Upload icon">
         </button>
       </div>
@@ -33,12 +32,8 @@
     <section class="card card--storage" aria-label="Storage usage">
       <p class="storage-text">You've used <strong>815 GB</strong> of your storage</p>
 
-      <div class="progress-bar" role="progressbar" aria-valuenow="815" aria-valuemin="0" aria-valuemax="1000" aria-label="815 of 1000 GB used">
-        <div class="progress-bar__track">
-          <div class="progress-bar__fill">
-            <span class="progress-bar__dot"></span>
-          </div>
-        </div>
+      <div class="progress-bar">
+        <progress class="progress-bar__meter" value="815" max="1000">815 of 1000 GB</progress>
         <div class="progress-bar__labels">
           <span class="progress-bar__label">0 GB</span>
           <span class="progress-bar__label">1000 GB</span>

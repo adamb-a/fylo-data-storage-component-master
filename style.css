@@ -123,32 +123,34 @@ body {
   width: 100%;
 }
 
-.progress-bar__track {
+.progress-bar__meter {
   width: 100%;
   height: 20px;
+  border: none;
+  border-radius: 10px;
+  display: block;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  overflow: hidden;
+}
+
+/* WebKit (Chrome, Safari, Edge) */
+.progress-bar__meter::-webkit-progress-bar {
   background-color: rgba(14, 20, 44, 0.5);
   border-radius: 10px;
   padding: 3px;
 }
 
-.progress-bar__fill {
-  width: 81.5%;
-  height: 100%;
+.progress-bar__meter::-webkit-progress-value {
   background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
   border-radius: 8px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
 }
 
-.progress-bar__dot {
-  width: 10px;
-  height: 10px;
-  background-color: white;
-  border-radius: 50%;
-  margin-right: 2px;
-  flex-shrink: 0;
+/* Firefox */
+.progress-bar__meter::-moz-progress-bar {
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  border-radius: 8px;
 }
 
 .progress-bar__labels {
