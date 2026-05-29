@@ -2,50 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fylo data storage component — track your cloud storage usage at a glance.">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
   <title>Frontend Mentor | Fylo data storage component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-  <main>
-    <header>
-      <img class="logo" src="images/logo.svg" alt="fylo logo">
-      <div class="action-icons-box">
-        <div class="action-icon"><img src="images/icon-document.svg" alt="upload icon"></div>
-        <div class="action-icon"><img src="images/icon-folder.svg" alt="folder icon"></div>
-        <div class="action-icon"><img src="images/icon-upload.svg" alt="upload icon"></div>
+  <main class="container">
+    <section class="card card--nav" aria-label="Fylo navigation">
+      <img class="logo" src="images/logo.svg" alt="Fylo logo" width="135" height="40">
+      <div class="action-icons">
+        <button class="action-icon" aria-label="Documents">
+          <img src="images/icon-document.svg" alt="Document icon">
+        </button>
+        <button class="action-icon" aria-label="Folders">
+          <img src="images/icon-folder.svg" alt="Folder icon">
+        </button>
+        <button class="action-icon" aria-label="Upload">
+          <img src="images/icon-upload.svg" alt="Upload icon">
+        </button>
       </div>
-    </header>
-    <article>
-      <div>
-        <h2>
-          You’ve used 815 GB of your storage
-        </h2>
-        <input type="range" name="progress" id="progress" value="85.5" disabled>
-        <div>
-          <h2>0 GB</h2>
-          <h2>1000 GB</h2>
+    </section>
+
+    <section class="card card--storage" aria-label="Storage usage">
+      <p class="storage-text">You've used <strong>815 GB</strong> of your storage</p>
+
+      <div class="progress-bar" role="progressbar" aria-valuenow="815" aria-valuemin="0" aria-valuemax="1000" aria-label="815 of 1000 GB used">
+        <div class="progress-bar__track">
+          <div class="progress-bar__fill">
+            <span class="progress-bar__dot"></span>
+          </div>
+        </div>
+        <div class="progress-bar__labels">
+          <span class="progress-bar__label">0 GB</span>
+          <span class="progress-bar__label">1000 GB</span>
         </div>
       </div>
-      <div>
-        <h1>185</h1>
-        <h2>GB Left</h2>
+
+      <div class="badge">
+        <span class="badge__number">185</span>
+        <span class="badge__text">GB Left</span>
       </div>
-    </article>
+    </section>
   </main>
-  
+
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Adam</a>.
   </footer>
 </body>
 </html>
